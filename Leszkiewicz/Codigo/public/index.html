@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Evaluación Leszkiewicz</title>
+
+</head>
+<body>
+    <button onclick="mostrar('in')">Insertar datos</button><br>
+    <button onclick="mostrar('del')">Eliminar datos</button><br>
+    <button onclick="mostrar('act'); datos();">Actualizar datos</button><br>
+    <button onclick="mostrar('ser');">Buscar datos</button><br>
+    
+    </br></br>
+
+    <div id="in" style="display: none;">
+        <h3>INSERTAR</h3>
+        <form action="/insertar" method="post">
+            </br>
+            <label for="nomb">Nombre: </label><input type="text" name="nomb" required>
+            <label for="liga">Liga: </label><input type="text" name="liga" required>
+            <label for="pais">Pais: </label><input type="text" name="pais"required></br>
+            <button type="submit">Insertar</button></br>
+        </form>
+    </div>
+    <div id="del"style="display: none;">
+        <h3>ELIMINAR DATOS</h3>
+        <button onclick="eliminar()">Eliminar registros</button>
+    </div>
+    <div id="act"style="display: none;">
+        <h3>ACTUALIZAR</h3>
+        <p id="act-datos"></p>
+    </div>
+    <div id="ser"style="display: none;">
+        <h3>BUSCAR DATOS</h3>
+        Nombre: <input id="buscar1" type="text"><button onclick="buscar_nombre();">Buscar nombre</button></br>
+        Liga: <input id="buscar2"type="text"><button onclick="buscar_liga();">Buscar liga</button></br>
+        Pais: <input id="buscar3"type="text"><button onclick="buscar_pais();">Buscar pais</button></br>
+
+        
+        <p id="res">
+        </p>
+        
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
